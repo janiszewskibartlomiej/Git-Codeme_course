@@ -1,0 +1,157 @@
+21/11/2020
+
+touch file tworzy plik file
+
+git config --list
+
+vim file1
+
+i - tryb edycji
+
+wpisujemy
+
+ecc - wyjscie z trybu command
+
+zeby zapisac :wq
+
+wyjscie bez zapisy q!
+
+linux >> mv zmienia nazwe pliku
+
+git commit -am""  dodje i comituje jak mamy te pliki sledzone
+
+git log   a wychodzimy wpisujac q
+
+git branch nzawa brancha  ale sie nei przelaczamy na niego
+
+git branch -b nazwa baerancha >> odrazu sie na niego przelaczamy
+
+git branch -l pokazuje liste branchy
+
+git branch -a pokazuje zdalne repozytoria
+
+cat fie1 wyswietla zawartosc pliku
+
+gitk  - wyswietla graficznie GUI
+
+git log --oneline  lista commitow
+
+git clone exercise2 exercise3  -- conuuej repo z jednego do drugiego
+
+git remote -- pokazuje zdlane repo
+git remote -v -- wiecej informacji
+
+git tag v1
+
+repozytorium serverowe git init --bare
+
+polaczenie repo ze zdalnym >> 
+
+$ git remote rm origin
+
+janis@KancelariaDJ MINGW64 /d/GITHUB/git_codeme/exercise3 (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+janis@KancelariaDJ MINGW64 /d/GITHUB/git_codeme/exercise3 (master)
+$ git remote add origin ../petprofile.git
+
+
+git push --set-upstream origin master
+
+przeslanei tagow na repo zdlane git push --tags
+
+git diff pokazuje roznice w repo  i globalnie i w pliku
+
+NIE TRZYMAC PLIKOW BINARNYCH W REPO ! BO DUZO WAZA
+
+ git config --global
+  --- pokazuje alisy zdefiniowane
+  
+  git config --global alias.tree 'log --oneline --decorate --graph'
+  
+  git config --get-regexp alias
+   >> lista aliasów
+   
+   git config --global --unset alias.co
+   >> kasowanie aliasa
+   
+git stash  -- zapisuje do przechowalni
+ moze sluzyc rowneiz do przenoszenia danych pomiedzy branchami
+ 
+ 
+ git stash apply   - wgranei z przechowalni - w tym momencie nie sa juz w przechowalni
+ 
+ git stash
+git stash show [-p >> wiecej info o zmianach - bierze pierwszy index od gury czyli 0] [stash@{0}]- co sie zmienilo
+git stash list
+git stash apply
+git stash apply stash@{1}
+git stash clear
+
+
+git reset --hard  -- resetuje do ostatniego commitu
+
+git diff - pokazuje zmiany
+
+!!!!! zeby zachowac katalog w git tworzymy w nowym katalogu plik .gitkeep
+
+git reset  -- cofa zmiany 
+
+Przedrostek WIP: w merge requests  -- nie mozna zmerge poniewaz jest work in progres -- stosuje sie aby np ktos zrobil review
+
+git reset --hrad -- usuwamy zmiany dodane do stage area oraz nei sledoznych
+
+git clean -f  -- usuwanie plikow niesledzonych plikow  -d katalogow nie sledzonych
+
+ git reset --soft origin/master  -- cofniedzie cie do poziomu ze remotly branch do steiging area - wycofanie zmiann 
+
+--mixted  cofa do working direktoryy - czyli nie sledzony
+
+--hard cofa wszystko do stanu z przed zmianach
+
+git revert -m 1 HEAD   >> tworzy nowy komit na podstawie cofniecia sie do rodzica
+
+git revert nr_sha   -- leprze podejscie
+
+resert czesto jest zabroniony n aserverze  -- revert jest ok
+
+git reset --hard f82c895  -- jak nie bylo push
+
+
+git push --force   >> nie uzywac - mozna nadpisac zdalne naszymi zmiany
+
+mozna zrobic plik configuracykmy .gitconfig    i tam n p nasz name i email  
+
+[user]
+	name = "Bartlomiej Janiszewski"
+	email = "janiszewski.bartlomiej@gmail.com"
+	
+jak to tworzymy w danym katkogu to bedzie stosowane dla wszytskiego w tym katalogu
+
+
+git rebase -i cd5e14f   scalanie commitow w jeden - squash commit
+
+git cherry-pick nr-sha   -- w branchu ktorym jestesmy dociagnelismy commit  wybrany
+
+repozyterium w repozytorium jest mozliwe jako sub modul al enie jset polecane
+
+git submodule add -b <branch> --name <name> <repository>
+
+używając git add -p – zobaczymy jakie zmiany zostały dokonane w pliku.
+
+
+
+
+
+
+ 
+   
